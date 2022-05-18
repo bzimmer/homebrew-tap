@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Serve < Formula
   desc "Serve static files over http(s)"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.6/go-scripts_0.0.6_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "3cc61999068fcdc349c3def3f745efe1dfe04f07ddb744f276dee6f7e0e1632c"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.7/go-scripts_0.0.7_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "d81a748b4c278943cc2144219601c823a254cdc019a7a0cf18e333e86619f880"
 
       def install
         bin.install "serve"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.6/go-scripts_0.0.6_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7356b6fd7b4bf946febc61d6a357b99b196cbef8b0c220e82455e09aec11a92f"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.7/go-scripts_0.0.7_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "32923ccdec19985df16caad9f72e55d75fd2f3f8ddf7610a7a79cddef37d838c"
 
       def install
         bin.install "serve"
