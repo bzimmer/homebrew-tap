@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Dustbin < Formula
   desc "Clean up file names"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.7/go-scripts_0.0.7_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "d81a748b4c278943cc2144219601c823a254cdc019a7a0cf18e333e86619f880"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.8/go-scripts_0.0.8_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "8d2f95f253f3926ba4ad4783465618915d696d1684f887806804a57df2d93d96"
 
       def install
         bin.install "dustbin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.7/go-scripts_0.0.7_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "32923ccdec19985df16caad9f72e55d75fd2f3f8ddf7610a7a79cddef37d838c"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.8/go-scripts_0.0.8_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ee79e6096097813d94f2473497c7f86892621aa38bc9af467a62bf4534617be7"
 
       def install
         bin.install "dustbin"
