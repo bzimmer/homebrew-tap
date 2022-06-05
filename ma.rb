@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.5.1"
+  version "0.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.1/ma_0.5.1_Darwin_x86_64.tar.gz"
-      sha256 "5749e0f1ca2729cc4f5d0d9eb7df3ef66be7839e6fac0b472eaa87f1b086e7d2"
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.2/ma_0.5.2_Darwin_x86_64.tar.gz"
+      sha256 "acac9cb088c710926c5aaa45747945241b9c75e87d7fba2143a9ce09dd8be34c"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.1/ma_0.5.1_Darwin_arm64.tar.gz"
-      sha256 "b6087b1ad917e8d8a1ec8861c35cdd170e91514eb5ba4014a59c9b0292179081"
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.2/ma_0.5.2_Darwin_arm64.tar.gz"
+      sha256 "59d568217ced71d2e20b4af768a0735c1ed1638d5bdbf8e887aa39f09279e674"
 
       def install
         bin.install "ma"
@@ -29,16 +29,16 @@ class Ma < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.1/ma_0.5.1_Linux_x86_64.tar.gz"
-      sha256 "376d724c1f42cb60a31c19833cce552de86ac5570789cfc8342de9bb81e9d463"
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.2/ma_0.5.2_Linux_x86_64.tar.gz"
+      sha256 "3692c8d7e5d01c5cefd6783f536ed35c7f459377667b9c2b2a6b904baac4465f"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.1/ma_0.5.1_Linux_arm64.tar.gz"
-      sha256 "39d08e0cc594635f2086da6fea797dd507890938beb4263d6df6453cede7c4e2"
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.2/ma_0.5.2_Linux_arm64.tar.gz"
+      sha256 "c4d7a93c3b119c499789583c55399c80429f177ac71ebb93975c35f1a09d430b"
 
       def install
         bin.install "ma"
