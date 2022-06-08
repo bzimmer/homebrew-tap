@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.5.4"
+  version "0.5.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.4/ma_0.5.4_Darwin_arm64.tar.gz"
-      sha256 "eface7b6156fe72fb9da562bb5e9166867ad289fc68abdaa89cee6cefcc023ac"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.5/ma_0.5.5_Darwin_x86_64.tar.gz"
+      sha256 "da97bbd6b7b31288266d0e7ffdf354504881c1ecd2b578ee0f3de59e7299aa49"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.4/ma_0.5.4_Darwin_x86_64.tar.gz"
-      sha256 "115b7db17121a8a8c9525838eb8799a138f168d915356a2f37ebbadf38f77d08"
+    if Hardware::CPU.arm?
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.5/ma_0.5.5_Darwin_arm64.tar.gz"
+      sha256 "f8fbd0f56a8f8194b0e8d72f4425359b69d7152764bc29bd61d409ff9d95c4c0"
 
       def install
         bin.install "ma"
@@ -28,17 +28,17 @@ class Ma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.4/ma_0.5.4_Linux_x86_64.tar.gz"
-      sha256 "e6b9daba87b4edfe4639f361d7bf9e23541bf1a887b02a5541ca5eae06876282"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.5/ma_0.5.5_Linux_arm64.tar.gz"
+      sha256 "2d2da7ec3c1440657048e63f7efc736f4a07cc31f9cc1bef6ec9ed5a0fd8ad01"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.5.4/ma_0.5.4_Linux_arm64.tar.gz"
-      sha256 "f386b620b7026be6ee46dfccb0df60a14dcd7bcf1549c241d48d5eba85e700c3"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.5.5/ma_0.5.5_Linux_x86_64.tar.gz"
+      sha256 "6cc45082e4761eabfe24e9bcd9bb63cd079748039d5cf00f831c468321afe1e6"
 
       def install
         bin.install "ma"
