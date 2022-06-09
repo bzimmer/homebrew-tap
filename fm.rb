@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Fm < Formula
   desc "Manipulate Excel on the command line"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.8/go-scripts_0.0.8_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "8d2f95f253f3926ba4ad4783465618915d696d1684f887806804a57df2d93d96"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.9/go-scripts_0.0.9_Darwin_arm64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f386825c77141539bdb9ac7408722fbd783e2bf3996b04c8c30be299ca10c178"
 
       def install
         bin.install "fm"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.8/go-scripts_0.0.8_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "ee79e6096097813d94f2473497c7f86892621aa38bc9af467a62bf4534617be7"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.9/go-scripts_0.0.9_Darwin_x86_64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c5128a4a6ee4e48ca27e1a22735d09c515a82579a30a227e62ee948e17948b0e"
 
       def install
         bin.install "fm"
