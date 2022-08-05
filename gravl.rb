@@ -5,21 +5,21 @@
 class Gravl < Formula
   desc "Command line clients for activity-related services"
   homepage "https://github.com/bzimmer/gravl"
-  version "0.7.3"
+  version "0.7.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.7.3/gravl_0.7.3_Darwin_x86_64.tar.gz"
-      sha256 "cedfebbcf343a7356d9c85e3bbc7c14879d06d717f1278d2659757776b6a2d6d"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.7.4/gravl_0.7.4_Darwin_x86_64.tar.gz"
+      sha256 "91f4ced427ced38244c743420b6c25cbd5759aa2482fbc0d806542317292cc42"
 
       def install
         bin.install "gravl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.7.3/gravl_0.7.3_Darwin_arm64.tar.gz"
-      sha256 "6c4f9589aa126e6011fdfdebd2154ba132d036dcf623a7e8b0fc7b198123ccb9"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.7.4/gravl_0.7.4_Darwin_arm64.tar.gz"
+      sha256 "98cf4a1979904da7dcc4d78b7b6dc0e5e6c9a27c736fd96c3738d4fa35118ec5"
 
       def install
         bin.install "gravl"
@@ -28,17 +28,17 @@ class Gravl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.7.3/gravl_0.7.3_Linux_arm64.tar.gz"
-      sha256 "b744dfbfad4972edbcebdcbd31b557c6ce44502ea293d6e7b2d6ffb9b8a1743c"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/gravl/releases/download/v0.7.4/gravl_0.7.4_Linux_x86_64.tar.gz"
+      sha256 "511019e564b46a86461a8ed49f3ac49cb34c0669e379b4153e47ccce532d6dda"
 
       def install
         bin.install "gravl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.7.3/gravl_0.7.3_Linux_x86_64.tar.gz"
-      sha256 "777dd0d8a8f2a62e9801bebde7c775842c540dd845a88cbb691a954898392fc0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bzimmer/gravl/releases/download/v0.7.4/gravl_0.7.4_Linux_arm64.tar.gz"
+      sha256 "dddd4815f76b7f289a1cf2e83a254b3b3eff632f984f46453ff6499f8b6dd30d"
 
       def install
         bin.install "gravl"
