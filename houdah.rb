@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Houdah < Formula
   desc "Create gpx files from Strava activities for HoudahGeo"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.17"
+  version "0.0.18"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.17/go-scripts_0.0.17_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "fced4c0230b2db08da454eef13cfe5a6e72cc145c91e4908499704019946599e"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.18/go-scripts_0.0.18_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "b36035735b34255f513f9eafca788101e9b06b1ef770be1b68c67e214f6e0cb9"
 
       def install
         bin.install "houdah"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.17/go-scripts_0.0.17_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "15b24306eb3f8da7faa230bb5724c37924abd90f98d49f7ef040ed31a2fc819c"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.18/go-scripts_0.0.18_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "97491e45bf43097c47eed0a86526dbf2a8e2a797ea7468210a68f4483d7dffd4"
 
       def install
         bin.install "houdah"
