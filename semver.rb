@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Semver < Formula
   desc "Determine the next semantic version"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.19"
+  version "0.0.20"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.19/go-scripts_0.0.19_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4d1dddfbf68f02ca1464a6ce38633a6c8a5e8546b2b64f62d5e18a78add7e6f2"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.20/go-scripts_0.0.20_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "58faa8db5522e9c4c4a089b875b5730a19d226b1ac72e1f1e24d83372ccb5fed"
 
       def install
         bin.install "semver"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.19/go-scripts_0.0.19_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "876eec1d9fdcf1c6083d8de0af386adffa01390e7b669bb058174e901aaea27b"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.20/go-scripts_0.0.20_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f287e1483aa804f2de938573e463543ae4976b95350a2d437c32e4786e461cef"
 
       def install
         bin.install "semver"
