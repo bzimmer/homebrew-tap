@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Album < Formula
   desc "Create a SmugMug album from a Strava activity"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.23"
+  version "0.0.24"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.23/go-scripts_0.0.23_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "89ab2d3d077d12480de6e1621e05a6fcc77a945b24e462c25b08b3fda57755c6"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.24/go-scripts_0.0.24_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "6f5d10c65473dc70964c22e1bc660e7a01fda703e741a437126d08d636d7748d"
 
       def install
         bin.install "album"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.23/go-scripts_0.0.23_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "cd40d4065c18501477dbf29ffbb2fe571975ea84144c412c0bfa3dafe5d3a9fa"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.24/go-scripts_0.0.24_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c5b2f96b5469f87fed6b88be6a3bf79dc4a9fae3757d7fc1871b94b72589a805"
 
       def install
         bin.install "album"
