@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.7.1"
+  version "0.7.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.1/ma_0.7.1_Darwin_arm64.tar.gz"
-      sha256 "556fc405fc9a6b1a7149cd908f3b083964e6694bc3548f32639c23a8b4f64e41"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.2/ma_0.7.2_Darwin_x86_64.tar.gz"
+      sha256 "4f4a53c5280a7d751ef0f3f17f2df367f55757f6a47e029dfcbc8982ba28b619"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.1/ma_0.7.1_Darwin_x86_64.tar.gz"
-      sha256 "b5da579b93591e053e919525360e685dbdd32a987897ac2a26dd88d2e6683449"
+    if Hardware::CPU.arm?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.2/ma_0.7.2_Darwin_arm64.tar.gz"
+      sha256 "f10d4931723275ce0c0ce4220ca5e49975c33724161d31e224f4957d3605d8f2"
 
       def install
         bin.install "ma"
@@ -28,17 +28,17 @@ class Ma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.1/ma_0.7.1_Linux_arm64.tar.gz"
-      sha256 "627e811e45f7a5088f646085498af1f39444234859c8aad7621bb7cce6d3ab4a"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.2/ma_0.7.2_Linux_x86_64.tar.gz"
+      sha256 "abfa77a266fb873590605ca4324e78e553f0f3053d17db52498f9c94294806ae"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.1/ma_0.7.1_Linux_x86_64.tar.gz"
-      sha256 "5e2a2ea830e43cabae218676596c4385e74696fe702582e2ce4307b6574abae4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.2/ma_0.7.2_Linux_arm64.tar.gz"
+      sha256 "ae07fecef5652c95d835f7e454e6d701aab83b8eface9c595549fec798827e8a"
 
       def install
         bin.install "ma"
