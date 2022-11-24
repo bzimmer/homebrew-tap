@@ -6,22 +6,22 @@ require_relative "lib/private_strategy"
 class Tg < Formula
   desc "Upload files to Telegram"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.31"
+  version "0.0.32"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.31/go-scripts_0.0.31_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7bb6fc7f854c22cd734c5520c0401d4815a67b71a619be698bde10708dc6089c"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.32/go-scripts_0.0.32_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "be5f114bfb233df57dce5b3354d1b7108cdaae42587014d425fd0fea26dbb1a9"
 
       def install
         bin.install "tg"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.31/go-scripts_0.0.31_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "696fc666d181548ee49eabf9760c2366518d12fd78499f01129a735428c6d8bf"
+      url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.32/go-scripts_0.0.32_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "d3e9b3bf22a6ddd7dfad4a7dce58cc3bb8c7f700f4ed2d71e5c694705d41f5f0"
 
       def install
         bin.install "tg"
