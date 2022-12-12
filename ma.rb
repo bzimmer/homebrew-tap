@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.7.6"
+  version "0.7.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.6/ma_0.7.6_Darwin_arm64.tar.gz"
-      sha256 "185f2c5470e9ab2a05b06bdb599552286be163805299a2078b15f9331a6e9886"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.7/ma_0.7.7_Darwin_arm64.tar.gz"
+      sha256 "6c414e831333288dc7507bd8424ced3800d865916b612ed0c134cbdbbd73347c"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.6/ma_0.7.6_Darwin_x86_64.tar.gz"
-      sha256 "777273ac755b60979c9730c2cdf08008eda604cc3e83ec63c8142f849225e2ef"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.7/ma_0.7.7_Darwin_x86_64.tar.gz"
+      sha256 "d9b540e79c06ea6ab6282478b44df0a3223a7f45e7e33f0f85e7394fc793ea09"
 
       def install
         bin.install "ma"
@@ -28,17 +28,17 @@ class Ma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.6/ma_0.7.6_Linux_arm64.tar.gz"
-      sha256 "402be0e51aa23c7ca7a2ed4460bc33f88c62708d7a788dd2c6c7ae627b935a1d"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.7/ma_0.7.7_Linux_x86_64.tar.gz"
+      sha256 "28aa2e23ec1bdc951ccd10fc6388ddcf705b5a53f8ba0ea6b64d975cf879d311"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.6/ma_0.7.6_Linux_x86_64.tar.gz"
-      sha256 "3669f54a6ccbd7fa04495838987648010a7dca8bedb69093db43a21676bfe6bd"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.7/ma_0.7.7_Linux_arm64.tar.gz"
+      sha256 "5ba3fbf9c712fe16fbce68af46dd9799aba9f5ae56ad34cb7825292e1820fb58"
 
       def install
         bin.install "ma"
