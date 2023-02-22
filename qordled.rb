@@ -5,21 +5,21 @@
 class Qordled < Formula
   desc "Wordle problem solver daemon"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.3.10"
+  version "0.3.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.10/qordle_0.3.10_darwin_amd64.tar.gz"
-      sha256 "3a02acce7c96962eaf839240fda92ce522a8032ba36d2ef0032b828fbfd2f789"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.11/qordle_0.3.11_darwin_amd64.tar.gz"
+      sha256 "bf92c7420dd60fced252ffa372ac475e5eb7348890896639307b6494c548be61"
 
       def install
         bin.install "qordled"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.10/qordle_0.3.10_darwin_arm64.tar.gz"
-      sha256 "f484655a109bc3216130debf289c7ce57229f95cbafa59efd47ab50a44a01c1d"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.11/qordle_0.3.11_darwin_arm64.tar.gz"
+      sha256 "47631b7f17223810d74571f40fc4d2612c79740a1c6924e7883002d4df4a669c"
 
       def install
         bin.install "qordled"
@@ -29,16 +29,16 @@ class Qordled < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.10/qordle_0.3.10_linux_arm64.tar.gz"
-      sha256 "de65d8c829abf283a853fc2d3f702ee301c8d90277c41a86a94d9bab21b73b57"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.11/qordle_0.3.11_linux_arm64.tar.gz"
+      sha256 "05da4f4939caaef3e412637d71438c4ff7f39a0d45f800fac2be8370e8f25bc9"
 
       def install
         bin.install "qordled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.10/qordle_0.3.10_linux_amd64.tar.gz"
-      sha256 "1e1caef04243fcd16dbcfb94f046cb78b204f478192cc62d4c7746bb397bd89f"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.11/qordle_0.3.11_linux_amd64.tar.gz"
+      sha256 "305a30c89d8097aaad84df56cd4eab99ccdef63ea73522adf7acffece6d1a846"
 
       def install
         bin.install "qordled"
