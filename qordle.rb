@@ -5,21 +5,21 @@
 class Qordle < Formula
   desc "Wordle problem solver"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.3.18"
+  version "0.3.19"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.18/qordle_0.3.18_darwin_amd64.tar.gz"
-      sha256 "a572e738bc3f4d12e260d2905c1ee183e6ac5841b4992c104ffb6e7c25454eb9"
+    if Hardware::CPU.arm?
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.19/qordle_0.3.19_darwin_arm64.tar.gz"
+      sha256 "645423efd4a211591c9ad679f1e06bb884514d1a76cbeb59c10d29778be402da"
 
       def install
         bin.install "qordle"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.18/qordle_0.3.18_darwin_arm64.tar.gz"
-      sha256 "fe2f1e075d7466ac0eca80c15bae8f8eb4db30b8461de70115a033ff916181d3"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.19/qordle_0.3.19_darwin_amd64.tar.gz"
+      sha256 "9731fc49e8f1d9b33bd55539d0093573199d3808a85bba65bf2369b46313bb4c"
 
       def install
         bin.install "qordle"
@@ -29,16 +29,16 @@ class Qordle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.18/qordle_0.3.18_linux_arm64.tar.gz"
-      sha256 "d040faced90d8457d35809691940c5083faa3fd3b46d8dc735e5fa2331071947"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.19/qordle_0.3.19_linux_arm64.tar.gz"
+      sha256 "5cc54c7596863284e941ed3374d17f247c9d8ddc7eaa844c114217f1b2909cde"
 
       def install
         bin.install "qordle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.18/qordle_0.3.18_linux_amd64.tar.gz"
-      sha256 "da01f2fe69a9096512825b4eabc89edef493a54c076f9c387868717ebf981911"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.19/qordle_0.3.19_linux_amd64.tar.gz"
+      sha256 "7c09e097571fbad78b18fb4dcf0497ecfead00d0d3b9fbe22ddc05f7a2f0cfcd"
 
       def install
         bin.install "qordle"
