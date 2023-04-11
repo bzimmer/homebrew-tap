@@ -5,21 +5,21 @@
 class Qordled < Formula
   desc "Wordle problem solver daemon"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.3.20"
+  version "0.3.21"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.20/qordle_0.3.20_darwin_amd64.tar.gz"
-      sha256 "cda3b880456cf9c4394a0331ec5556e2b842f73bc37a3007f845b5d366bb5714"
+    if Hardware::CPU.arm?
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.21/qordle_0.3.21_darwin_arm64.tar.gz"
+      sha256 "c75c59c9c4576dfeb77695f09331fcb659cb31f2691771320b76e4eafc27013a"
 
       def install
         bin.install "qordled"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.20/qordle_0.3.20_darwin_arm64.tar.gz"
-      sha256 "69fcb832c0c0fad3c10b95c74542c8025cc01733867f9cf47faf5189bb11ab46"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.21/qordle_0.3.21_darwin_amd64.tar.gz"
+      sha256 "fec09007e7d1e738ae32f5cf49dc83c9b8ca20bcb6697938debc87cce81beb28"
 
       def install
         bin.install "qordled"
@@ -29,16 +29,16 @@ class Qordled < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.20/qordle_0.3.20_linux_arm64.tar.gz"
-      sha256 "455dc21022cbae5a02e04dc43829a79db86749e2386ed59e3d8c8d4835799237"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.21/qordle_0.3.21_linux_arm64.tar.gz"
+      sha256 "5557f9c39c0396e87465bd344491c1935404c316af49aed247e6dfed30f73ef3"
 
       def install
         bin.install "qordled"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.20/qordle_0.3.20_linux_amd64.tar.gz"
-      sha256 "fbb173a9a83360af84ef72380d533e976bd233cacb92d3b2f2f0a89e05059b22"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.21/qordle_0.3.21_linux_amd64.tar.gz"
+      sha256 "e5c3f15aeede1926814218e8ceb7bd0caba6889a0bd579e74b73a8d296970e58"
 
       def install
         bin.install "qordled"
