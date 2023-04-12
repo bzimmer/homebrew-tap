@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.7.10"
+  version "0.7.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.10/ma_0.7.10_darwin_amd64.tar.gz"
-      sha256 "a6d78ddb64ba2353e81cb3b5d027dc0f0f25d01713882f5c54d3521037f0d541"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.11/ma_0.7.11_darwin_amd64.tar.gz"
+      sha256 "29324adb019e9e68cef95e3ad7466b5f511802cbc529c0a77a0c45748b50c7ea"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.10/ma_0.7.10_darwin_arm64.tar.gz"
-      sha256 "b904f817cc6bf145ed974f7194e1ae4673c3a26ee3c7ce771547677da49b03a8"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.11/ma_0.7.11_darwin_arm64.tar.gz"
+      sha256 "42380db634bcd21f37179ce1eb3fa976c7b66983193149bbea851fd955e6cd48"
 
       def install
         bin.install "ma"
@@ -28,17 +28,17 @@ class Ma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.10/ma_0.7.10_linux_amd64.tar.gz"
-      sha256 "f4eacb493b3c94bd644f9d88cc491585b495660f4f0b1a0b73bde2ce345a5264"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.11/ma_0.7.11_linux_arm64.tar.gz"
+      sha256 "1ccb51559606cb94706459a2d25edc90b7f43cf1743e81fa19e8214d540d6d6c"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.10/ma_0.7.10_linux_arm64.tar.gz"
-      sha256 "5226041cb330db5c87057d5c123450fd28b71f5fc87045a346db4f576daf5087"
+    if Hardware::CPU.intel?
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.11/ma_0.7.11_linux_amd64.tar.gz"
+      sha256 "4bbb9941d380701444b9c4391140e054b107a621eed29d3beb4ec56d848c35a7"
 
       def install
         bin.install "ma"
