@@ -5,21 +5,21 @@
 class Gravl < Formula
   desc "Command line clients for activity-related services"
   homepage "https://github.com/bzimmer/gravl"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.9.1/gravl_0.9.1_Darwin_x86_64.tar.gz"
-      sha256 "235b49d7dc28e12decce7c34d744e0b9ed97be0951f672e8b17c6994031d709c"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.9.2/gravl_0.9.2_Darwin_x86_64.tar.gz"
+      sha256 "ffebf59b318ed4fd4e2fcaa026805957393089ac4a09aa98dc25d72b749a7ccb"
 
       def install
         bin.install "gravl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.9.1/gravl_0.9.1_Darwin_arm64.tar.gz"
-      sha256 "191b1cc5c12915b9232c6269a1c3c1e01847e2f3cc21d28f2a715a82fb40e0d8"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.9.2/gravl_0.9.2_Darwin_arm64.tar.gz"
+      sha256 "61cbb6274e849e90579949a99848f41ee4aceca5f10246274f35d3c8cc44d2d0"
 
       def install
         bin.install "gravl"
@@ -29,16 +29,16 @@ class Gravl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.9.1/gravl_0.9.1_Linux_arm64.tar.gz"
-      sha256 "2df894b0a767a9bd2f28da8d100617a71d2840a24008c748349cc27019e7d41a"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.9.2/gravl_0.9.2_Linux_arm64.tar.gz"
+      sha256 "0bc96971ae6c9eec3cb421c9ee0e2fa7f733ba5eda0d2ab523490de23745aa9e"
 
       def install
         bin.install "gravl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/gravl/releases/download/v0.9.1/gravl_0.9.1_Linux_x86_64.tar.gz"
-      sha256 "be7293e0e3b875d6e3fe72d42476bea375eee81ad600795e4cf5ffced2da9b91"
+      url "https://github.com/bzimmer/gravl/releases/download/v0.9.2/gravl_0.9.2_Linux_x86_64.tar.gz"
+      sha256 "bbacdd94875be8e8398251ae403ec176a94079c6af6763c4844c377c92a071ec"
 
       def install
         bin.install "gravl"
