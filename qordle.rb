@@ -5,21 +5,21 @@
 class Qordle < Formula
   desc "Wordle problem solver"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.3.23"
+  version "0.3.24"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.23/qordle_0.3.23_darwin_amd64.tar.gz"
-      sha256 "4b263a22a38bd1cfc578c8d82f1fd60b0abb6fd0d3bad4c2a6663c2cbc223936"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.24/qordle_0.3.24_darwin_amd64.tar.gz"
+      sha256 "ba0da75edd77ef5d27f506bad938ec1071f9b55b0dada88ff99ed149a9d6705f"
 
       def install
         bin.install "qordle"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.23/qordle_0.3.23_darwin_arm64.tar.gz"
-      sha256 "9099dfaf3beffed297bc03ab7e66a742085a5ed53a48370c88362cca7c2ef679"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.24/qordle_0.3.24_darwin_arm64.tar.gz"
+      sha256 "5a45feaed26be93ede8a225866822138454e0fd429857b0ef415a3d78d2eed6b"
 
       def install
         bin.install "qordle"
@@ -29,16 +29,16 @@ class Qordle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.23/qordle_0.3.23_linux_arm64.tar.gz"
-      sha256 "57b44793dd7111fa6619ebb9a9cbb693f68bac4938485ea0ae68782c696c6180"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.24/qordle_0.3.24_linux_arm64.tar.gz"
+      sha256 "e738f5f5ebb216765c68d5c55ce47ab9b4c2101da403177a6bbe481625ad632b"
 
       def install
         bin.install "qordle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.23/qordle_0.3.23_linux_amd64.tar.gz"
-      sha256 "569fb6b544921a56f81b5fd69b921ac0b9c1aefa348071a610bfeff05cb00fcd"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.24/qordle_0.3.24_linux_amd64.tar.gz"
+      sha256 "e48fc044f6fc1c9291e8d02df6ca9ee476f6dbf851e26e43708f9da19968cd14"
 
       def install
         bin.install "qordle"
