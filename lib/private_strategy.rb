@@ -137,4 +137,9 @@ class GitHubPrivateRepositoryReleaseDownloadStrategy < GitHubPrivateRepositoryDo
     #GitHub::API.open_rest(release_url)
     GitHub.get_release(@owner, @repo, @tag)
   end
+
+  def resolve_url_basename_time_file_size(url, timeout: nil)
+    # added in response to https://github.com/Homebrew/brew/issues/15169
+    [download_url, "", Time.now, 0, false]
+  end
 end
