@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.7.13"
+  version "0.7.14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.13/ma_0.7.13_darwin_amd64.tar.gz"
-      sha256 "6ac66ca4f3c223e20c5d3b9eec491404b683643459793388795a173d07799e7a"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_darwin_amd64.tar.gz"
+      sha256 "5216199ecac39e4fc36b8a29cb8bbfbbe50299b0f3dd2bdc04ec002e8caf5519"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.13/ma_0.7.13_darwin_arm64.tar.gz"
-      sha256 "0b0f826a7195587c73f4d1965b63c9dc7d0d73f423193a8858ecb62f261851e5"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_darwin_arm64.tar.gz"
+      sha256 "cd9cc090a71e390c9012e43f757c96a0dd944b39835d674ecf97d89a28f88982"
 
       def install
         bin.install "ma"
@@ -29,16 +29,16 @@ class Ma < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.13/ma_0.7.13_linux_arm64.tar.gz"
-      sha256 "3908a5379c0a41afc1e51c1c3443d9cd9b2f03ecc204804a0719661d39f2d1ca"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_linux_arm64.tar.gz"
+      sha256 "52954c526e567a91021c61185d8631954e8b6adf12cfcf67d835b2990dad6221"
 
       def install
         bin.install "ma"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.13/ma_0.7.13_linux_amd64.tar.gz"
-      sha256 "36c7d30e3d0fdc3d0b135c7877708356759ff40b16e93f13f73cf7395322d163"
+      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_linux_amd64.tar.gz"
+      sha256 "f2b4d41f8b6f6f77dcf3afc7b43b69a7b4b4c512c1a8d9527e749ef8ff117615"
 
       def install
         bin.install "ma"
