@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.7.14"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_darwin_amd64.tar.gz"
-      sha256 "5216199ecac39e4fc36b8a29cb8bbfbbe50299b0f3dd2bdc04ec002e8caf5519"
+    on_intel do
+      url "https://github.com/bzimmer/ma/releases/download/v0.8.1/ma_0.8.1_darwin_amd64.tar.gz"
+      sha256 "808ef98b191a4cc94bc85d49c4ca1ff8aded2c46ae9dabc7fc91ed24984bc50b"
 
       def install
         bin.install "ma"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_darwin_arm64.tar.gz"
-      sha256 "cd9cc090a71e390c9012e43f757c96a0dd944b39835d674ecf97d89a28f88982"
+    on_arm do
+      url "https://github.com/bzimmer/ma/releases/download/v0.8.1/ma_0.8.1_darwin_arm64.tar.gz"
+      sha256 "c723f34909380b0a0feea67f0b4d2b14a9fb651105bc290640ba4d928570c69b"
 
       def install
         bin.install "ma"
@@ -28,20 +28,24 @@ class Ma < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_linux_arm64.tar.gz"
-      sha256 "52954c526e567a91021c61185d8631954e8b6adf12cfcf67d835b2990dad6221"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bzimmer/ma/releases/download/v0.8.1/ma_0.8.1_linux_amd64.tar.gz"
+        sha256 "6d54eb5167b19a02da84aea8bb282aeeb8db26d6f060f862df9bc7708ac12512"
 
-      def install
-        bin.install "ma"
+        def install
+          bin.install "ma"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bzimmer/ma/releases/download/v0.7.14/ma_0.7.14_linux_amd64.tar.gz"
-      sha256 "f2b4d41f8b6f6f77dcf3afc7b43b69a7b4b4c512c1a8d9527e749ef8ff117615"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/bzimmer/ma/releases/download/v0.8.1/ma_0.8.1_linux_arm64.tar.gz"
+        sha256 "32a7b90594a5b0e971a32cd8db70192d0f5e015f24e564b9d2e060a9a9815543"
 
-      def install
-        bin.install "ma"
+        def install
+          bin.install "ma"
+        end
       end
     end
   end
