@@ -5,21 +5,21 @@
 class Ma < Formula
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/bzimmer/ma/releases/download/v0.9.0/ma_0.9.0_darwin_amd64.tar.gz"
-      sha256 "aeef917aaeec68d40ee6e415d55f843148c5ffb805cbdb16d31cf6829b2ffec9"
+      url "https://github.com/bzimmer/ma/releases/download/v0.9.1/ma_0.9.1_darwin_amd64.tar.gz"
+      sha256 "2436397e0cc6880bcab9177d6a720bbd70166ba48dc05f05f0d15ea1c9c35e38"
 
       def install
         bin.install "ma"
       end
     end
     on_arm do
-      url "https://github.com/bzimmer/ma/releases/download/v0.9.0/ma_0.9.0_darwin_arm64.tar.gz"
-      sha256 "e2be51c8723afa2a5064e86de8af9bbcbcbd74e56ef9f664d57a58c2c38a9604"
+      url "https://github.com/bzimmer/ma/releases/download/v0.9.1/ma_0.9.1_darwin_arm64.tar.gz"
+      sha256 "8d05639a4692e7078c64383512d2bdbff4c2547a2b8aa7408b197edda345394a"
 
       def install
         bin.install "ma"
@@ -30,8 +30,8 @@ class Ma < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bzimmer/ma/releases/download/v0.9.0/ma_0.9.0_linux_amd64.tar.gz"
-        sha256 "d3880d91e7aa86839f25c4486e0cb739f816257663fe8ce20c2ac49dd3b39108"
+        url "https://github.com/bzimmer/ma/releases/download/v0.9.1/ma_0.9.1_linux_amd64.tar.gz"
+        sha256 "2fe70e774b33d95e058e89053e95b1bf93afe47f50b59ad2af4fbd018e0b472d"
 
         def install
           bin.install "ma"
@@ -40,8 +40,8 @@ class Ma < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bzimmer/ma/releases/download/v0.9.0/ma_0.9.0_linux_arm64.tar.gz"
-        sha256 "b63593595ab9b955f31f4534f3521a04211e4fb08d9fa7eea230721d94c784b5"
+        url "https://github.com/bzimmer/ma/releases/download/v0.9.1/ma_0.9.1_linux_arm64.tar.gz"
+        sha256 "6d93e45a78b59db920c48ca3bea789c013861257dc2298fb5f8d6426faafd769"
 
         def install
           bin.install "ma"
