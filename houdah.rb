@@ -6,13 +6,13 @@ require_relative "lib/private_strategy"
 class Houdah < Formula
   desc "Create gpx files from Strava activities for HoudahGeo"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.38"
+  version "0.0.39"
   license "MIT"
   depends_on :macos
 
   on_arm do
-    url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.38/go-scripts_0.0.38_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "807b1beea88c3313cf7d67f5fc612c43ac1da4c3f090983fe7a063491afac48a"
+    url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.39/go-scripts_0.0.39_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "c4aca40bc6f7e1b9c79c581ff5209e496fb7c7e8c0a143ea7a8917ef2e4689f2"
 
     def install
       bin.install "houdah"
