@@ -6,13 +6,13 @@ require_relative "lib/private_strategy"
 class Tripit < Formula
   desc "Export TripIt data to json"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.40"
+  version "0.0.41"
   license "MIT"
   depends_on :macos
 
   on_arm do
-    url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.40/go-scripts_0.0.40_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "f6cf0c12ec5e4700e06b4c1936e9753fefedcdcc8d60d1b864f647c5ca829ab4"
+    url "https://github.com/bzimmer/go-scripts/releases/download/v0.0.41/go-scripts_0.0.41_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "efbd1d1c3034dbc48ffcf0e69a0b355fc7342f81b7a739e5fac1d8f486d01f98"
 
     def install
       bin.install "tripit"
