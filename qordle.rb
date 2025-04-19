@@ -5,21 +5,21 @@
 class Qordle < Formula
   desc "Wordle problem solver"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.3.26"
+  version "0.3.27"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.26/qordle_0.3.26_darwin_amd64.tar.gz"
-      sha256 "f31187c8e672bb1676092fc5eecb9d0177dfeca647b2c06e59c7662365152001"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.27/qordle_0.3.27_darwin_amd64.tar.gz"
+      sha256 "b788a809ed8420de63d6aabaf9c133f7ddf620afba846d571a4cc9117aec2135"
 
       def install
         bin.install "qordle"
       end
     end
     on_arm do
-      url "https://github.com/bzimmer/qordle/releases/download/v0.3.26/qordle_0.3.26_darwin_arm64.tar.gz"
-      sha256 "a1947bd5ca68e31b78a28b730c54f2028b6d8387ec43c95113499eb2a5ad3788"
+      url "https://github.com/bzimmer/qordle/releases/download/v0.3.27/qordle_0.3.27_darwin_arm64.tar.gz"
+      sha256 "d38edda58d8cbd6b809eb3224e74aa5bf63e53dde2b5a4a133f5474f205ad3b0"
 
       def install
         bin.install "qordle"
@@ -30,8 +30,8 @@ class Qordle < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bzimmer/qordle/releases/download/v0.3.26/qordle_0.3.26_linux_amd64.tar.gz"
-        sha256 "d3c9cf512256bc43ef42ede3e7105df19ad5c8d6843f96f5294614c40e124626"
+        url "https://github.com/bzimmer/qordle/releases/download/v0.3.27/qordle_0.3.27_linux_amd64.tar.gz"
+        sha256 "34f09378a31b35e3262748ff68d5b7976b23fc1bd0c3e9413dddc71e448b6600"
 
         def install
           bin.install "qordle"
@@ -40,8 +40,8 @@ class Qordle < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/bzimmer/qordle/releases/download/v0.3.26/qordle_0.3.26_linux_arm64.tar.gz"
-        sha256 "005da666c3028cc28dc9521422eee42bcd1f01a62773ee1516f9888655b78177"
+        url "https://github.com/bzimmer/qordle/releases/download/v0.3.27/qordle_0.3.27_linux_arm64.tar.gz"
+        sha256 "8284f473d7bbabf73b1b9f9b9c18559dc4666b8bacfe41a7d32b9efa21c2434e"
 
         def install
           bin.install "qordle"
