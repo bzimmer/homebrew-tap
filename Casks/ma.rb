@@ -3,7 +3,7 @@ cask "ma" do
   name "ma"
   desc "Simple tools for managing media files with SmugMug"
   homepage "https://github.com/bzimmer/ma"
-  version "0.10.1"
+  version "0.10.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "ma" do
   on_macos do
     on_intel do
       url "https://github.com/bzimmer/ma/releases/download/v#{version}/ma_#{version}_darwin_amd64.tar.gz"
-      sha256 "1684443544a5678f13b445ec6e015f67b37499ab64c2b7805fbddeb4d78a6ee3"
+      sha256 "31d330e2ed4a0d5b44c238de58481cf1b8c7d513d1cacceb1dba559596ee12ae"
     end
     on_arm do
       url "https://github.com/bzimmer/ma/releases/download/v#{version}/ma_#{version}_darwin_arm64.tar.gz"
-      sha256 "7c372a44d8df48998c621c39b2a9fecf7003b3722551979dda6cbb4d71d4f51f"
+      sha256 "01f9887b65dfae7f6dd7da2c077d1b1b3ccfa286f793400052c9dd6e595c5902"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/bzimmer/ma/releases/download/v#{version}/ma_#{version}_linux_amd64.tar.gz"
-      sha256 "90a99363fc607d2a9a1b3dcc3659d89bce349787c93cf54286b4c0a5f71ce413"
+      sha256 "d1b14df687ad314970d51dfce383ef285d9722b8c2e3e12e661517894ce979d6"
     end
     on_arm do
       url "https://github.com/bzimmer/ma/releases/download/v#{version}/ma_#{version}_linux_arm64.tar.gz"
-      sha256 "66de2338efa8f2369083f3781e1616a0c926c3687cf35717428b41075537046f"
+      sha256 "0abbeffd997ec278498ec82d1678f55ac0846e77d89463c2b9cd8e6198d22876"
     end
   end
 
