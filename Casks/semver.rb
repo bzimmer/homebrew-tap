@@ -3,7 +3,7 @@ cask "semver" do
   name "semver"
   desc "Determine the next semantic version"
   homepage "https://github.com/bzimmer/go-scripts"
-  version "0.0.42"
+  version "0.0.43"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,7 +14,7 @@ cask "semver" do
   on_macos do
     on_arm do
       url "https://github.com/bzimmer/go-scripts/releases/download/v#{version}/go-scripts_#{version}_darwin_arm64.tar.gz"
-      sha256 "d9e1e53572be5471b7c134d415a6776e9bbe5d3c16466eed0d30795c24ce1284"
+      sha256 "b2c128435527858bc3037d9328810bd762d089af37d75ebe8e9abfebb375cc60"
     end
   end
 
