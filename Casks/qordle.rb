@@ -3,7 +3,7 @@ cask "qordle" do
   name "qordle"
   desc "Wordle problem solver"
   homepage "https://github.com/bzimmer/qordle"
-  version "0.4.0"
+  version "0.4.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,28 +14,28 @@ cask "qordle" do
   on_macos do
     on_intel do
       url "https://github.com/bzimmer/qordle/releases/download/v#{version}/qordle_#{version}_darwin_amd64.tar.gz"
-      sha256 "3509a52de62f2ab0f83eba2a107f5c0e816dfa2e3d0d61bad759b4d673f9404d"
+      sha256 "5e8753d4572488543cb7a0d2aa4eb4cf212ee255f5bbca9649bf49127c49b636"
     end
     on_arm do
       url "https://github.com/bzimmer/qordle/releases/download/v#{version}/qordle_#{version}_darwin_arm64.tar.gz"
-      sha256 "cd09a8ffab1eac8b7c5f77f85b498cdbd77c6dedc137f6fe0c588bd2eb81fc03"
+      sha256 "943732a1318c9004a9556a0f66b8159e84fa990759632f3560ac621c4b81fba6"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/bzimmer/qordle/releases/download/v#{version}/qordle_#{version}_linux_amd64.tar.gz"
-      sha256 "d0b6ea295172ba413959a2df30a560e73e33bf02c73f3344f32ea02b385a2116"
+      sha256 "ee3ae83e3e8988261f849e6e13176d2234f2c67f72c468aaa46368fad9f542a1"
     end
     on_arm do
       url "https://github.com/bzimmer/qordle/releases/download/v#{version}/qordle_#{version}_linux_arm64.tar.gz"
-      sha256 "8bb5eb825aa5556b67b334bd48cb905ab19517af3ad925f86a36eb53e874a901"
+      sha256 "2f23b3267ac38115b627de9802c678c7daf0868556abce161e613ad70a0e4f12"
     end
   end
 
   postflight do
     if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ma"]
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/qordle"]
     end
   end
 
