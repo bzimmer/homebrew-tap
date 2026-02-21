@@ -3,7 +3,7 @@ cask "gravl" do
   name "gravl"
   desc "Command line clients for activity-related services"
   homepage "https://github.com/bzimmer/gravl"
-  version "0.11.1"
+  version "0.11.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "gravl" do
   on_macos do
     on_intel do
       url "https://github.com/bzimmer/gravl/releases/download/v#{version}/gravl_#{version}_darwin_amd64.tar.gz"
-      sha256 "7b18ac9737cba5f0916d27b5cc6100f391dc2b9e44f7b58570e0845458adf61f"
+      sha256 "688432353a6754a6274c5d52f5be981d2af82e9477d5fdbb35b5d0080e72739d"
     end
     on_arm do
       url "https://github.com/bzimmer/gravl/releases/download/v#{version}/gravl_#{version}_darwin_arm64.tar.gz"
-      sha256 "f53251e2de4c89a3beba1c662a7cd495ab1de7380855ca24ff4f61fcbc9a45bd"
+      sha256 "f21b2c1420bc25584c4ff0dcd88e50bd12e49bd45fe595a0a757f8d7c9b74c97"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/bzimmer/gravl/releases/download/v#{version}/gravl_#{version}_linux_amd64.tar.gz"
-      sha256 "80d10b7b9000462e96e7587237b051d22c16ffd35521b699772049ea39d06a97"
+      sha256 "0364c9a679a629627326eac2a7df60a35cda6869237702e4399c8b1a18fbd90a"
     end
     on_arm do
       url "https://github.com/bzimmer/gravl/releases/download/v#{version}/gravl_#{version}_linux_arm64.tar.gz"
-      sha256 "ad3469e1573fd49005c181a5f569db060593451e4a284b50b387e9b31444281c"
+      sha256 "625651a73580163b83e75024d413680135391ee18ba1907ccef8af9b29db146b"
     end
   end
 
